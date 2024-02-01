@@ -85,8 +85,8 @@ public class MemberRepositoryTest {
 		// 1. user1의 객체를 생성한다. 2. 게시물을 지운다. 3. 멤버를 지운다
 		Member member = Member.builder().id("user1").build();
 
-		boardRepository.deleteWriter(member);
-		memberRepository.deleteById("user1");
+		boardRepository.deleteWriter(member);//회원의 게시물 삭제
+		memberRepository.deleteById("user1"); //회원 삭제
 	}
 
 }

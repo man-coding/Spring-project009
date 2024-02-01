@@ -41,6 +41,16 @@ public class CommentRepositoryTest {
 	}
 
 	@Test
+	public void 게시물별_댓글목록조회() {
+
+		Board board = Board.builder().no(1).build();
+		List<Comment> list = repository.findByBoard(board);
+		for (Comment comment : list) {
+			System.out.println(comment);
+		}
+	}
+
+	@Test
 	public void 댓글단건조회() {
 		Optional<Comment> result = repository.findById(1);
 
@@ -65,6 +75,14 @@ public class CommentRepositoryTest {
 	public void 댓글삭제() {
 
 		repository.deleteById(1);
+	}
+
+	@Test
+	public void 게시물별_댓글일괄삭제() {
+
+		Board board = Board.builder().no(1).build();
+
+		repository.deleteByBoard(board);
 	}
 
 }
