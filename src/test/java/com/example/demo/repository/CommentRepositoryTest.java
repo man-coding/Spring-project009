@@ -20,9 +20,9 @@ public class CommentRepositoryTest {
 	@Test
 	public void 댓글등록() {
 
-		Member member = Member.builder().id("chch2857").build();
+		Member member = Member.builder().id("user1").build();
 
-		Board board = Board.builder().no(1).build();
+		Board board = Board.builder().no(4).build();
 
 		Comment comment = Comment.builder().commentNo(1).board(board).content("댓글입니다").writer(member).build();
 

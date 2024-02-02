@@ -16,7 +16,7 @@ public interface CommentService {
 	List<CommentDTO> getListByBoardNo(int boardNo);
 
 	// 댓글 삭제 메소드
-	void remoeve(int no);
+	boolean remove(int no);
 
 	default Comment dtoToEntity(CommentDTO dto) {
 
